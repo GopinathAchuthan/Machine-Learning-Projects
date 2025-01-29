@@ -17,16 +17,15 @@ There are various types of regression models, each with its own assumptions, app
 
 **Mathematical Formula**:
 
-\[
+```math
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon
-\]
-
-Where:
-- \(Y\) is the dependent variable (target).
-- \(\beta_0\) is the intercept.
-- \(\beta_1, \beta_2, ..., \beta_n\) are the coefficients of the features.
-- \(X_1, X_2, ..., X_n\) are the features.
-- \(\epsilon\) is the error term (residuals).
+```
+where
+- $Y$ is the dependent variable (target).
+- $\beta_0$ is the intercept.
+- $\beta_1, \beta_2, \dots, \beta_n$ are the coefficients of the features.
+- $X_1, X_2, \dots, X_n$ are the features.
+- $\epsilon$ is the error term (residuals)..
 
 **Use Cases**:
 - Predicting house prices based on features like square footage, number of bedrooms, etc.
@@ -55,9 +54,9 @@ Where:
 
 **Mathematical Formula** (for a quadratic model):
 
-\[
+$$
 Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \dots + \beta_n X^n + \epsilon
-\]
+$$
 
 **Use Cases**:
 - When the relationship between variables is not linear and curved patterns need to be captured.
@@ -82,12 +81,12 @@ Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \dots + \beta_n X^n + \eps
 
 **Cost Function**:
 
-\[
+$$
 \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} \beta_i^2
-\]
+$$
 
 Where:
-- \(\lambda\) is the regularization parameter.
+- $\lambda$ is the regularization parameter.
 
 **Use Cases**:
 - When there are many correlated features, and you want to reduce the risk of overfitting.
@@ -103,7 +102,7 @@ Where:
 
 **Cons**:
 - Doesn’t eliminate features; it only reduces their impact.
-- Performance depends heavily on the choice of regularization parameter (\(\lambda\)).
+- Performance depends heavily on the choice of regularization parameter ($\lambda$).
 
 ---
 
@@ -112,9 +111,9 @@ Where:
 
 **Cost Function**:
 
-\[
+$$
 \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} |\beta_i|
-\]
+$$
 
 **Use Cases**:
 - When automatic feature selection is desired (i.e., identifying the most important features).
@@ -139,9 +138,9 @@ Where:
 
 **Cost Function**:
 
-\[
+$$
 \text{Cost Function} = \text{Least Squares} + \lambda_1 \sum_{i=1}^{n} |\beta_i| + \lambda_2 \sum_{i=1}^{n} \beta_i^2
-\]
+$$
 
 **Use Cases**:
 - When you need the benefits of both Lasso and Ridge regression.
@@ -155,7 +154,7 @@ Where:
 - Provides the benefits of both Lasso and Ridge regression.
 
 **Cons**:
-- The regularization parameters (\(\lambda_1\) and \(\lambda_2\)) can be difficult to tune.
+- The regularization parameters ($\lambda_1$ and $\lambda_2$) can be difficult to tune.
 - Still doesn't completely solve the multicollinearity issue in some cases.
 
 ---
@@ -169,7 +168,7 @@ Where:
 
 **Model Assumptions**:
 - The data may exhibit nonlinear relationships.
-- Assumes the errors are within a certain threshold \(\epsilon\) (epsilon-insensitive loss).
+- Assumes the errors are within a certain threshold $\epsilon$ (epsilon-insensitive loss).
 
 **Pros**:
 - Robust to outliers.
@@ -208,11 +207,11 @@ Where:
 
 **Mathematical Formula**:
 
-\[
+$$
 Q_\tau(Y) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n
-\]
+$$
 
-Where \(Q_\tau(Y)\) represents the \(\tau\)-th quantile of the target variable \(Y\).
+Where $Q_\tau(Y)$ represents the $\tau$-th quantile of the target variable $Y$.
 
 **Use Cases**:
 - When you are interested in predicting the median (or other quantiles) of the target variable instead of the mean.
