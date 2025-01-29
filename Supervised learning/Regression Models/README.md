@@ -235,6 +235,160 @@ Where \(Q_\tau(Y)\) represents the \(\tau\)-th quantile of the target variable \
 
 ---
 
+### i. **Random Forest Regression**
+**Description**: Random Forest Regression is an ensemble method that uses multiple decision trees to predict outcomes. It works by averaging the predictions of many individual decision trees to improve accuracy and reduce overfitting.
+
+**Use Cases**:
+- When the relationship between features and the target is complex and non-linear.
+- Suitable for datasets with high dimensionality.
+
+**Pros**:
+- Can model complex relationships.
+- Robust to overfitting due to averaging of multiple trees.
+- Handles both linear and non-linear data.
+
+**Cons**:
+- More computationally expensive than simpler models.
+- Harder to interpret than a single decision tree.
+
+---
+
+### j. **Gradient Boosting Regression**
+**Description**: Gradient Boosting builds an ensemble of trees sequentially, where each tree attempts to correct the errors of the previous one. It is an additive model that is trained to reduce residual errors.
+
+**Use Cases**:
+- Predicting outcomes with a large number of features and complex relationships.
+- Examples: Predicting financial data, health outcomes, or customer churn.
+
+**Pros**:
+- Can model complex patterns and interactions.
+- Often provides high predictive performance.
+
+**Cons**:
+- Prone to overfitting if not carefully tuned.
+- Can be computationally expensive.
+
+---
+
+### k. **K-Nearest Neighbors Regression (KNN Regression)**
+**Description**: KNN regression predicts the target value by averaging the values of the K closest neighbors to a given data point. It's a non-parametric method that doesn't make strong assumptions about the form of the data.
+
+**Use Cases**:
+- When the data is highly non-linear and no explicit model for the relationship is needed.
+- Useful for simple, small datasets.
+
+**Pros**:
+- Simple and intuitive.
+- Can model complex relationships without making strong assumptions about the data.
+
+**Cons**:
+- Computationally expensive for large datasets, as it requires distance calculations for each prediction.
+- Sensitive to the choice of K and feature scaling.
+
+---
+
+### l. **Bayesian Regression**
+**Description**: Bayesian Regression provides a probabilistic approach to regression. It estimates the parameters of the model using a Bayesian framework, updating the model's beliefs based on the observed data. Instead of point estimates for the model coefficients, Bayesian regression gives a probability distribution.
+
+**Use Cases**:
+- When you want to quantify the uncertainty in the predictions.
+- Suitable for small datasets or when prior knowledge is available.
+
+**Pros**:
+- Provides uncertainty estimates for predictions.
+- Can incorporate prior knowledge through priors.
+
+**Cons**:
+- Computationally intensive, especially with large datasets.
+- Requires expertise in probabilistic modeling.
+
+---
+
+### m. **Gaussian Process Regression (GPR)**
+**Description**: Gaussian Process Regression is a non-parametric method that uses a Gaussian process (a distribution over functions) to model the relationship between inputs and outputs. It is especially useful for problems where you want a smooth, continuous prediction.
+
+**Use Cases**:
+- When you need a flexible, non-linear model with a smooth prediction function.
+- Common in time-series forecasting and spatial data modeling.
+
+**Pros**:
+- Can provide a measure of uncertainty in predictions.
+- Can model highly complex, non-linear relationships.
+
+**Cons**:
+- Computationally expensive for large datasets.
+- Requires inversion of large covariance matrices, which can be challenging.
+
+---
+
+### n. **Neural Network Regression**
+**Description**: Neural networks, particularly deep learning models, can be used for regression tasks. These models are capable of learning complex, high-dimensional relationships between inputs and outputs through multiple layers of processing.
+
+**Use Cases**:
+- When the data has a high degree of non-linearity and complexity.
+- Suitable for large, high-dimensional datasets (e.g., image or time-series data).
+
+**Pros**:
+- Can model very complex relationships.
+- Suitable for large, unstructured datasets (e.g., images, text).
+
+**Cons**:
+- Requires large amounts of data and computational power.
+- Hard to interpret, often referred to as a "black box" model.
+
+---
+
+### o. **Principal Component Regression (PCR)**
+**Description**: Principal Component Regression combines Principal Component Analysis (PCA) with linear regression. It first reduces the dimensionality of the data by projecting it onto the principal components, and then performs linear regression on the reduced set of features.
+
+**Use Cases**:
+- When there is high multicollinearity between features.
+- Common in situations where the number of features exceeds the number of observations.
+
+**Pros**:
+- Helps in handling multicollinearity and dimensionality reduction.
+- Can improve performance when features are highly correlated.
+
+**Cons**:
+- Interpretability can be difficult due to the use of principal components.
+- The first few principal components may not always be the most informative for the target.
+
+---
+
+### p. **Partial Least Squares Regression (PLS)**
+**Description**: Partial Least Squares Regression is similar to PCR, but instead of focusing only on variance in the data, it also tries to capture the relationship between the features and the target variable during dimensionality reduction.
+
+**Use Cases**:
+- For high-dimensional data where there are more predictors than observations.
+- Common in chemometrics, bioinformatics, and image processing.
+
+**Pros**:
+- Handles collinearity between predictors.
+- Reduces the dimensionality of the data.
+
+**Cons**:
+- Like PCR, interpretation of the components can be difficult.
+- May require tuning to get optimal performance.
+
+---
+
+### q. **Huber Regression**
+**Description**: Huber regression is a robust regression model that combines the properties of both least squares and absolute error regression. It uses squared loss for errors that are small and absolute loss for larger errors, making it less sensitive to outliers.
+
+**Use Cases**:
+- When the data contains outliers that can distort predictions.
+- Suitable for noisy data where robust prediction is required.
+
+**Pros**:
+- Less sensitive to outliers than ordinary least squares regression.
+- Provides a balance between sensitivity to large errors and robustness to outliers.
+
+**Cons**:
+- Requires setting a threshold to switch between squared and absolute error.
+- May not be as accurate as other methods when outliers are not present.
+
+---
+
 #### 3. Key Concepts in Regression
 - **Overfitting vs. Underfitting**:
   - **Overfitting**: When the model is too complex and learns the noise in the training data, leading to poor generalization on new data.
