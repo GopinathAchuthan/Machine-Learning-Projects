@@ -20,15 +20,15 @@ There are various types of regression models, each with its own assumptions and 
 
 - **Description**: The simplest and most common form of regression. Linear regression assumes that there is a **linear relationship** between the independent variables (features) and the dependent variable (target).
 - **Mathematical Formula**:
-  \[
+  ```math
   Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_n X_n + \epsilon
-  \]
+  ```
   Where:
-  - \(Y\) is the dependent variable (target).
-  - \(\beta_0\) is the intercept.
-  - \(\beta_1, \beta_2, ..., \beta_n\) are the coefficients of the features.
-  - \(X_1, X_2, ..., X_n\) are the features.
-  - \(\epsilon\) is the error term (residuals).
+  - Y is the dependent variable (target).
+  - β₀ is the intercept.
+  - β₁, β₂, ..., βₙ are the coefficients of the features.
+  - X₁, X₂, ..., Xₙ are the features.
+  - ε is the error term (residuals).
   
 - **Use cases**:
   - Predicting house prices based on features like square footage, number of bedrooms, etc.
@@ -38,9 +38,10 @@ There are various types of regression models, each with its own assumptions and 
 
 - **Description**: A form of regression where the relationship between the independent and dependent variables is modeled as a **polynomial** rather than a straight line.
 - **Mathematical Formula** (for a quadratic model):
-  \[
+  ```math
   Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + ... + \beta_n X^n + \epsilon
-  \]
+  ```
+  
 - **Use cases**:
   - When the relationship between variables is not linear, and you need to capture **curved patterns**.
   - Example: Modeling the trajectory of an object (e.g., projectile motion).
@@ -51,9 +52,9 @@ There are various types of regression models, each with its own assumptions and 
   - The regularization term is the sum of the squared coefficients, scaled by a parameter \(\lambda\) (the regularization parameter).
   - The goal is to reduce the complexity of the model while keeping it accurate.
   
-  \[
+  ```math
   \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} \beta_i^2
-  \]
+  ```
   
 - **Use cases**:
   - When there are many correlated features, and you want to reduce the risk of overfitting.
@@ -63,9 +64,9 @@ There are various types of regression models, each with its own assumptions and 
 
 - **Description**: Similar to ridge regression, but instead of squaring the coefficients, Lasso regression uses the **absolute values** of the coefficients as the penalty. This results in **sparse solutions**, where some coefficients are driven to zero.
   
-  \[
+  ```math
   \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} |\beta_i|
-  \]
+  ```
   
 - **Use cases**:
   - When you want to perform feature selection automatically (i.e., identifying the most important features).
@@ -75,9 +76,9 @@ There are various types of regression models, each with its own assumptions and 
 
 - **Description**: Elastic Net is a combination of **Lasso** and **Ridge** regression. It uses both L1 and L2 regularization, which allows it to handle situations where there are correlated features and also perform feature selection.
   
-  \[
+  ```math
   \text{Cost Function} = \text{Least Squares} + \lambda_1 \sum_{i=1}^{n} |\beta_i| + \lambda_2 \sum_{i=1}^{n} \beta_i^2
-  \]
+  ```
   
 - **Use cases**:
   - When you want the benefits of both Lasso and Ridge regression.
