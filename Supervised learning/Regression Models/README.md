@@ -49,7 +49,7 @@ There are various types of regression models, each with its own assumptions and 
 #### **c. Ridge Regression (L2 Regularization)**
 
 - **Description**: A variation of linear regression that introduces a **penalty term** to prevent overfitting by shrinking the coefficients. It adds a regularization term to the cost function.
-  - The regularization term is the sum of the squared coefficients, scaled by a parameter \(\lambda\) (the regularization parameter).
+  - The regularization term is the sum of the squared coefficients, scaled by a parameter λ (the regularization parameter).
   - The goal is to reduce the complexity of the model while keeping it accurate.
   
   ```math
