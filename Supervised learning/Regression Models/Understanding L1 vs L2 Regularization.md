@@ -1,5 +1,4 @@
 ## Understanding L1 vs L2 Regularization in Machine Learning
----
 
 **L1 vs L2 regularization** are two common techniques used in machine learning to prevent overfitting by penalizing large coefficients (weights) of the model. Both techniques add a penalty term to the loss function, but they do so in different ways.
 
@@ -7,11 +6,11 @@
 
 - **Formula**: L1 regularization adds a penalty equal to the absolute value of the coefficients. It’s mathematically represented as:
 
-  $$ \text{Loss function} = \text{Original Loss} + \lambda \sum_{i} |w_i| $$
+  $\text{Loss function} = \text{Original Loss} + \lambda \sum_{i} |w_i|$
   
   Where:
-  - \w_i is the weight (coefficient) of the feature \i
-  - \lambda is the regularization parameter that controls the strength of the penalty
+  - $w_i$ is the weight (coefficient) of the feature $i$
+  - $\lambda$ is the regularization parameter that controls the strength of the penalty
 
 - **Effect on Weights**: L1 regularization tends to produce sparse models, meaning that it drives many feature weights to exactly zero. This makes it useful for feature selection because irrelevant features are eliminated.
 
@@ -23,11 +22,11 @@
 
 - **Formula**: L2 regularization adds a penalty equal to the square of the coefficients. It is mathematically represented as:
 
-  $$ \text{Loss function} = \text{Original Loss} + \lambda \sum_{i} w_i^2 $$
-  
+  $\text{Loss function} = \text{Original Loss} + \lambda \sum_{i} w_i^2$
+
   Where:
-  - \w_i is the weight (coefficient) of the feature \i
-  - \lambda is the regularization parameter that controls the strength of the penalty
+  - $w_i$ is the weight (coefficient) of the feature $i$
+  - $\lambda$ is the regularization parameter that controls the strength of the penalty
 
 - **Effect on Weights**: L2 regularization tends to shrink the coefficients towards zero but generally does not set them exactly to zero. This means that all features remain in the model, but their impact is reduced. L2 encourages smaller, more evenly distributed weights.
 
@@ -49,7 +48,7 @@
 ### **Combination of L1 and L2: Elastic Net**
 In some cases, you might want to combine both L1 and L2 regularization. This can be done using **Elastic Net**, which blends the benefits of both Lasso (L1) and Ridge (L2) regularization:
 
-$$ \text{Loss function} = \text{Original Loss} + \lambda_1 \sum_{i} |w_i| + \lambda_2 \sum_{i} w_i^2 $$
+$\text{Loss function} = \text{Original Loss} + \lambda_1 \sum_{i} |w_i| + \lambda_2 \sum_{i} w_i^2$
 
 Elastic Net is useful when you have a large number of correlated features or when you want the sparsity of L1 but with the stability of L2.
 
