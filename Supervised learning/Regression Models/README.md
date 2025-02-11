@@ -16,7 +16,7 @@ There are various types of regression models, each with its own assumptions, app
 - **Description**: Linear regression assumes a linear relationship between independent variables and the dependent variable.
 - **Mathematical Formula**:
   
-  $$ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon $$
+  $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon$
 
 - **Use Cases**: Predicting outcomes like house prices, sales, or temperature based on continuous features.
 - **Assumptions**:
@@ -38,7 +38,7 @@ There are various types of regression models, each with its own assumptions, app
 - **Description**: Ridge regression modifies linear regression by adding a penalty term (L2 regularization) to reduce the magnitude of the coefficients.
 - **Mathematical Formula**:
   
-  $$ \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} \beta_i^2 $$
+  $\text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} \beta_i^2$
 
 - **Use Cases**: When dealing with multicollinearity or high-dimensional datasets.
 - **Assumptions**:
@@ -57,7 +57,7 @@ There are various types of regression models, each with its own assumptions, app
 - **Description**: Lasso regression uses L1 regularization, which shrinks some coefficients to zero, effectively performing feature selection.
 - **Mathematical Formula**:
   
-  $$ \text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} |\beta_i| $$
+  $\text{Cost Function} = \text{Least Squares} + \lambda \sum_{i=1}^{n} |\beta_i$$
 
 - **Use Cases**: Feature selection in high-dimensional datasets.
 - **Assumptions**:
@@ -76,7 +76,7 @@ There are various types of regression models, each with its own assumptions, app
 - **Description**: Polynomial regression extends linear regression by adding polynomial terms to capture nonlinear relationships.
 - **Mathematical Formula** (for quadratic model):
   
-  $$ Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \dots + \beta_n X^n + \epsilon $$
+  $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \dots + \beta_n X^n + \epsilon$
 
 - **Use Cases**: When the relationship between the independent and dependent variables is nonlinear.
 - **Assumptions**:
@@ -141,7 +141,7 @@ There are various types of regression models, each with its own assumptions, app
 - **Description**: Elastic Net is a hybrid model combining both Lasso (L1) and Ridge (L2) regularization, offering a balance between feature selection and regularization.
 - **Mathematical Formula**:
   
-  $$ \text{Cost Function} = \text{Least Squares} + \lambda_1 \sum_{i=1}^{n} |\beta_i| + \lambda_2 \sum_{i=1}^{n} \beta_i^2 $$
+  $\text{Cost Function} = \text{Least Squares} + \lambda_1 \sum_{i=1}^{n} |\beta_i| + \lambda_2 \sum_{i=1}^{n} \beta_i^2$
 
 - **Use Cases**: Datasets with correlated features or where both feature selection and regularization are needed.
 - **Assumptions**:
