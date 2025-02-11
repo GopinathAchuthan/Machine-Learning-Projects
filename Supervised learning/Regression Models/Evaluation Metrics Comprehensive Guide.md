@@ -63,7 +63,7 @@
   
 - **Interpretation**: Expressed as a percentage, MAPE provides a relative measure of the error, making it easier to understand across different scales.
 - **Use**: Useful for understanding the relative prediction accuracy.
-
+- **Note**: There is some variation in MAPE.
 ---
 
 ### 7. **Explained Variance Score**
