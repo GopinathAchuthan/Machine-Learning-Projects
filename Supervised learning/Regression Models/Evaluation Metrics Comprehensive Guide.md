@@ -108,7 +108,3 @@
 | **Residual Plot**                | Visual tool to check model assumptions                 | Used to detect patterns, outliers, and assumptions violations |
 
 ---
-
-### **Conclusion**
-
-The **essential regression metrics** give you a comprehensive picture of model performance, both numerically and visually. Using a combination of these metrics helps you assess the accuracy, goodness-of-fit, and the validity of the model's assumptions.
